@@ -3,7 +3,7 @@ from aiogram import Bot, Dispatcher
 from aiogram.types import Update
 from fastapi import FastAPI, Request
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN")
+BOT_TOKEN = os.environ.get("8525182861:AAEZlNNf0m1U_KS7ZcuB9WksJkGlvvmflfM")
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 app = FastAPI()

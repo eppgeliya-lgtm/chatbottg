@@ -11,12 +11,13 @@ from aiogram.types import (
 from aiogram.filters import CommandStart
 
 # 🔐 ТОЛЬКО через env
-import os
-
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 CHANNEL_ID = int(os.getenv("CHANNEL_ID"))
 KEYWORD = os.getenv("KEYWORD")
 PHOTO_URL = os.getenv("PHOTO_URL")
+
+if not BOT_TOKEN:
+    raise RuntimeError("BOT_TOKEN not set")
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()

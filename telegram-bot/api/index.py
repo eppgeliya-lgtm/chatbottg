@@ -11,11 +11,12 @@ from aiogram.types import (
 from aiogram.filters import CommandStart
 
 # 🔐 ТОЛЬКО через env
-BOT_TOKEN = os.getenv("BOT_TOKEN")
+import os
 
-CHANNEL_ID = -1001343482992
-KEYWORD = "Хочу"
-PHOTO_URL = "https://sun9-54.userapi.com/s/v1/ig2/iJUFH3WYpQeoE4ey_5AeHpQpEeNAg9rX6AqB0iRfbwbErDdAnJDQy3YCGQA0MQQ8nmuz_tmDAxp25DlOwRQHx9Fx.jpg"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+CHANNEL_ID = int(os.getenv("CHANNEL_ID"))
+KEYWORD = os.getenv("KEYWORD")
+PHOTO_URL = os.getenv("PHOTO_URL")
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
